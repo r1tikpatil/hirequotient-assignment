@@ -41,7 +41,7 @@ const Navbar = () => {
               </li>
             </div>
             <div className="flex justify-center items-center box-content">
-              <li className="bg-white box-content border border-gray-300 transition-all duration-300 ease-in-out text-black font-bold text-lg hover:border-black px-4 py-2 rounded-lg">
+              <li className="bg-white box-content border border-gray-300 transition-all duration-300 ease-in-out text-black font-bold text-lg hover:border-black px-4 py-2 rounded-xl">
                 Buy Template
               </li>
             </div>
