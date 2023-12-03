@@ -5,6 +5,7 @@ import DashBoard from "./components/dashboard/dashboard.componet";
 import Features from "./components/features/features.components";
 import AddMore from "./components/addMore/addMore.component";
 import FAQ from "./components/faq/faq.component";
+import Pricing from "./components/pricing/pricing.component";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Features />
       <AddMore />
       <FAQ />
+      <Pricing />
     </div>
   );
 };
