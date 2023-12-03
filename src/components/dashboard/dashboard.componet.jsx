@@ -9,11 +9,24 @@ const DashBoard = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+  });
   return (
     <div className="bg-gradient-to-b pt-16 md:pt-24 pb-4 flex flex-col items-center from-[#fdf2ec] via-white">
       <motion.p
+        ref={ref1}
         initial={{ y: 35, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={inView1 ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.3 }}
         className="text-[#8247ff] text-[12px] border rounded-lg flex justify-center items-center align-center px-4 font-bold  align-center bg-white"
       >
@@ -21,8 +34,9 @@ const DashBoard = () => {
       </motion.p>
 
       <motion.div
+        ref={ref2}
         initial={{ y: 35, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={inView2 ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.3 }}
         className="w-[80%] text-center flex mt-[5px] md:mt-[10px] flex-col items-center"
       >
@@ -35,8 +49,9 @@ const DashBoard = () => {
       </motion.div>
 
       <motion.div
+        ref={ref3}
         initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={inView3 ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.4 }}
         className="w-[70%] flex text-[#aba7a6] mt-4 md:mt-12 text-md text-center md:text-xl font-semibold flex-col items-center"
       >
@@ -47,8 +62,9 @@ const DashBoard = () => {
       </motion.div>
 
       <motion.div
+        ref={ref4}
         initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={inView4 ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="flex mt-6  py-2 flex-col md:flex-row justify-evenly items-center w-[85%] md:w-2/5 align-center"
       >
