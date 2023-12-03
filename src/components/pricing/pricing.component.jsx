@@ -42,24 +42,31 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="pt-24 flex flex-col items-center bg-white w-screen pb-16">
+    <div className="pt-24 flex flex-col items-center justify-center bg-white pb-16">
       <p className="text-[#8247ff] text-[12px] border rounded-lg flex justify-center items-center align-center px-4 font-bold  align-center bg-white">
         <span className="mr-2 text-lg">💲</span> PRICING
       </p>
 
-      <div className="flex mt-2 flex-col items-center">
-        <p className="text-[45px] font-semibold">
+      <div className="flex w-[90%] mt-2 text-center flex-col items-center">
+        <p className="text-4xl md:text-[45px] font-semibold">
           Select your ideal <span className="text-[#fe8162]">Pricing </span>{" "}
           plan
         </p>
       </div>
 
-      <div className="flex text-[#aba7a6]  text-xl mt-2 font-semibold flex-col items-center">
-        <p>At Manage Wise, we believe in providing you with </p>
-        <p>pricing plans that adapt to your unique needs.</p>
+      <div className="flex w-[90%] text-center text-[#aba7a6] text-lg md:text-xl mt-3 md:mt-2 font-semibold flex-col items-center">
+        <p>
+          At Manage Wise, we believe in providing you with{" "}
+          <span className="inline md:hidden">
+            pricing plans that adapt to your unique needs.
+          </span>{" "}
+        </p>
+        <p className="hidden md:block">
+          pricing plans that adapt to your unique needs.
+        </p>
       </div>
 
-      <div>
+      <div className="w-full flex flex-col justify-center items-center">
         {data.map((item) => (
           <PricingCard
             keys={item.key}

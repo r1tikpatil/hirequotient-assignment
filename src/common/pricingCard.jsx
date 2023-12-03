@@ -6,7 +6,7 @@ const PricingCard = ({ keys, plan, rupees, points }) => {
     <div
       className={`${
         keys % 2 !== 0 ? "bg-[#ededfa]" : "bg-[#1c1c1c]"
-      } h-[70vh] w-[35vw] my-8 rounded-3xl p-12 flex flex-col items-center relative`}
+      } h-[50vh] md:h-[70vh] w-[90%] md:w-[35vw] my-4 md:my-8 rounded-3xl p-12 flex flex-col items-center relative`}
     >
       <div className="w-full rounded-lg">
         <p className="text-[#fe8162] text-[12px] rounded-lg px-3 font-bold bg-white inline-block">

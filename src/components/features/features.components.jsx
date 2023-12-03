@@ -36,28 +36,33 @@ const Features = () => {
   ];
 
   return (
-    <div className="pt-24 flex flex-col items-center bg-white w-screen pb-16">
+    <div className="pt-24 flex flex-col items-center bg-white pb-16">
       <p className="text-[#8247ff] text-[12px] border rounded-lg flex justify-center items-center align-center px-4 font-bold  align-center bg-white">
         <span className="mr-2 text-lg">🔥</span> PREMIER FEATURES
       </p>
 
       <div className="flex mt-2 flex-col items-center">
-        <p className="text-[45px] font-semibold">
+        <p className="text-4xl md:text-[45px] text-center font-semibold">
           Discover our product's{" "}
           <span className="text-[#fe8162]">Capabilities</span>
         </p>
       </div>
 
-      <div className="flex text-[#aba7a6]  text-xl mt-2 font-semibold flex-col items-center">
-        <p>Don't settle for mediocrity embrace the future of management</p>
-        <p>with Manage Wise.</p>
+      <div className="flex w-[85%] mt-4 md:mt-2 text-[#aba7a6] text-center text-lg md:text-xl font-semibold flex-col items-center">
+        <p>
+          Don't settle for mediocrity embrace the future of management{" "}
+          <span className="inline md:hidden"> with Manage Wise.</span>
+        </p>
+        <p className="md:block hidden ">with Manage Wise.</p>
       </div>
 
-      <div className="bg-[#ededfa] rounded-3xl h-1/2 w-2/5 p-8 pt-16 mt-16">
-        <span className=" rounded-2xl text-3xl p-1 bg-white">⭐️</span>
+      <div className="bg-[#ededfa] rounded-3xl h-1/2 w-[90%] md:w-2/5 p-8 pt-16 mt-16">
+        <span className=" rounded-2xl text-2xl md:text-3xl p-1 bg-white">
+          ⭐️
+        </span>
 
         <div className="w-[85%] mt-6">
-          <p className="text-4xl font-semibold leading-normal">
+          <p className="text-2xl md:text-4xl font-semibold leading-normal">
             Boost productivity and streamline workflow with us. Enjoy our
             intuitive interface and robust features.
           </p>

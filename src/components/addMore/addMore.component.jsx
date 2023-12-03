@@ -26,22 +26,25 @@ const AddMore = () => {
   ];
 
   return (
-    <div className="bg-[#1c1c1c] w-screen px-16 pt-24 overflow-hidden">
+    <div className="bg-[#1c1c1c] px-8 md:px-16 pt-16 md:pt-24 overflow-hidden">
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  flex justify-center items-center font-bold bg-white w-[140px]">
         <span className="mr-2 text-lg">🤩</span> AND MORE...
       </p>
 
-      <div className="text-white text-[40px] mt-4 font-semibold">
+      <div className="text-white text-4xl md:text-[40px] mt-4 font-semibold">
         <p>
           Explore an array of features that elevate your{" "}
           <span className="text-[#fe8162]">Productivity</span> to
         </p>
-        <p className="mt-[-15px]">new heights</p>
+        <p>new heights</p>
       </div>
 
-      <div className="text-[#aba7a6] text-xl mt-4 mb-8 font-semibold">
-        <p>Discover the tools that will revolutionize the way you</p>
-        <p>manage and optimize your operations</p>
+      <div className="text-[#aba7a6] text-lg md:text-xl mt-4 mb-8 md:font-semibold">
+        <p className="">
+          Discover the tools that will revolutionize the way you{" "}
+          <span className="md:hidden">manage and optimize your operations</span>
+        </p>
+        <p className="hidden md:block">manage and optimize your operations</p>
       </div>
 
       {data.map((item) => (
@@ -58,21 +61,29 @@ const AddMore = () => {
         </p>
       </div>
 
-      <div className="text-white text-[40px] flex-col mt-4 w-full font-semibold flex justify-center items-center">
+      <div className="text-white text-4xl md:text-[40px] text-center flex-col mt-4 w-full font-semibold flex justify-center items-center">
         <p>
           Enable <span className="text-[#fe8162]">integration</span> with other
         </p>
-        <p className="mt-[-15px]">popular tools and platforms</p>
+        <p>popular tools and platforms</p>
       </div>
 
-      <div className="text-[#aba7a6] text-xl mt-4 mb-8 font-semibold flex justify-center items-center flex-col">
-        <p>Seamlessly connect and amplify your workflow </p>
-        <p>by enabling integration with a diverse array of </p>
-        <p>widely-used tools and platforms.</p>
+      <div className="text-[#aba7a6] text-center text-xl mt-4 mb-8 font-semibold flex justify-center items-center flex-col">
+        <p>
+          Seamlessly connect and amplify your workflow{" "}
+          <span className="md:hidden">
+            by enabling integration with a diverse array of widely-used tools
+            and platforms.
+          </span>
+        </p>
+        <p className="hidden md:block">
+          by enabling integration with a diverse array of{" "}
+        </p>
+        <p className="hidden md:block">widely-used tools and platforms.</p>
       </div>
 
       <div className="w-full mt-8 mb-[-5px] flex justify-center items-center ">
-        <img src={Image6} alt="img" className="h-1/2 w-1/2 " />
+        <img src={Image6} alt="img" className="h-1/2 w-[95%] md:w-1/2 " />
       </div>
     </div>
   );

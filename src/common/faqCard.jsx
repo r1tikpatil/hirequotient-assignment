@@ -11,17 +11,17 @@ const FAQCard = ({ question, answer }) => {
     <div
       onClick={handleClick}
       className={`my-4 py-4 px-8 rounded-3xl bg-[#f7f8fd] box-border transition-all duration-300 ease-in-out ${
-        isOpen ? "h-[150px] " : "h-[70px] "
+        isOpen ? "h-[300px] md:h-[150px] " : "h-[100px] md:h-[70px] "
       }`}
     >
       <div
-        className={`flex justify-between items-center text-2xl font-semibold hover:cursor-pointer ${
+        className={`flex justify-between items-center text-[17px] md:text-2xl font-bold md:font-semibold hover:cursor-pointer ${
           isOpen ? "text-[#8247ff]" : "text-black"
         }`}
       >
         <p>{question}</p>
         <p
-          className={`text-[#8247ff] text-4xl transform transition-transform ${
+          className={`text-[#8247ff] ml-2 text-4xl font-light md:font-bold transform transition-transform ${
             isOpen ? "rotate-45" : "rotate-0"
           } `}
         >
@@ -34,7 +34,9 @@ const FAQCard = ({ question, answer }) => {
           isOpen ? "block	" : "hidden"
         } transition-all duration-600 ease-in-out `}
       >
-        <p className="text-[#aba7a6] text-lg font-semibold">{answer}</p>
+        <p className="text-[#aba7a6] text-md md:text-lg font-semibold">
+          {answer}
+        </p>
       </div>
     </div>
   );

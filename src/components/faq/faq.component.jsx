@@ -34,22 +34,27 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-screen px-16 pt-24 bg-white">
-      <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  flex justify-center items-center font-bold bg-white w-[80px]">
+    <div className="px-8 md:px-16 pt-24 bg-white flex flex-col items-center md:items-start">
+      <p className="text-[#8247ff] text-[12px] border rounded-lg px-2 flex justify-center items-center font-bold bg-white w-[80px]">
         <span className="mr-2 text-lg">🙋‍♀️</span> FAQ
       </p>
 
-      <div className="text-black text-[40px] mt-4 font-semibold">
+      <div className="text-black md:text-left text-center text-4xl md:text-[40px] mt-4 font-semibold">
         <p>Need</p>
-        <p className="text-[#fe8162] mt-[-15px]">Answers?</p>
+        <p className="text-[#fe8162]">Answers?</p>
       </div>
 
-      <div className="text-[#aba7a6] text-xl mt-4 mb-8 font-semibold">
-        <p>Check out our most commonly asked questions below to</p>
-        <p>find the information you need.</p>
+      <div className="text-[#aba7a6] md:text-left text-center text-lg md:text-xl mt-4 mb-8 font-semibold">
+        <p>
+          Check out our most commonly asked questions below to{" "}
+          <span className="md:hidden inline">
+            find the information you need.
+          </span>
+        </p>
+        <p className="md:block hidden">find the information you need.</p>
       </div>
 
-      <div>
+      <div className="w-full">
         {data.map((item) => (
           <FAQCard question={item.question} answer={item.ans} />
         ))}
