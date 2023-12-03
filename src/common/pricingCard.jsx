@@ -1,9 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { FaCheck } from "react-icons/fa";
 
 const PricingCard = ({ keys, plan, rupees, points }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={{ y: 35, opacity: 0 }}
+      animate={inView ? { y: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       className={`${
         keys % 2 !== 0 ? "bg-[#ededfa]" : "bg-[#1c1c1c]"
       } h-[50vh] md:h-[70vh] w-[90%] md:w-[35vw] my-4 md:my-8 rounded-3xl p-8 md:p-12 flex flex-col items-center relative`}
@@ -49,7 +58,7 @@ const PricingCard = ({ keys, plan, rupees, points }) => {
           Get Started
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import FAQCard from "../../common/faqCard";
 
@@ -33,16 +35,29 @@ const FAQ = () => {
     },
   ];
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div className="px-8 md:px-16 pt-24 bg-white flex flex-col items-center md:items-start">
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2 flex justify-center items-center font-bold bg-white w-[80px]">
         <span className="mr-2 text-lg">🙋‍♀️</span> FAQ
       </p>
 
-      <div className="text-black md:text-left text-center text-4xl md:text-[40px] mt-4 font-semibold">
+      <motion.div
+        ref={ref}
+        initial={{ y: 25, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="text-black md:text-left text-center text-4xl md:text-[40px] mt-4 font-semibold"
+      >
         <p>Need</p>
         <p className="text-[#fe8162]">Answers?</p>
-      </div>
+      </motion.div>
 
       <div className="text-[#aba7a6] md:text-left text-center text-lg md:text-xl mt-4 mb-8 font-semibold">
         <p>
@@ -54,11 +69,17 @@ const FAQ = () => {
         <p className="md:block hidden">find the information you need.</p>
       </div>
 
-      <div className="w-full">
+      <motion.div
+        ref={ref1}
+        initial={{ y: 85, opacity: 0 }}
+        animate={inView1 ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+        className="w-full"
+      >
         {data.map((item) => (
           <FAQCard question={item.question} answer={item.ans} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

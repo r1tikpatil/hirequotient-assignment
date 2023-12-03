@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import FeatureCard from "../../common/featureCard";
 
@@ -35,20 +37,33 @@ const Features = () => {
     },
   ];
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div className="pt-24 flex flex-col items-center bg-white pb-16">
       <p className="text-[#8247ff] text-[12px] border rounded-lg flex justify-center items-center align-center px-4 font-bold  align-center bg-white">
         <span className="mr-2 text-lg">🔥</span> PREMIER FEATURES
       </p>
 
-      <div className="flex w-[90%] md:w-[100%] mt-2 flex-col items-center">
+      <motion.div
+        ref={ref}
+        initial={{ y: 25, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="flex w-[90%] md:w-[100%] mt-2 md:mt-6 flex-col items-center"
+      >
         <p className="text-4xl md:text-[45px] text-center font-semibold">
           Discover our product's{" "}
           <span className="text-[#fe8162]">Capabilities</span>
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex w-[85%] mt-4 md:mt-2 text-[#aba7a6] text-center text-lg md:text-xl font-semibold flex-col items-center">
+      <div className="flex w-[85%] mt-4 md:mt-6 text-[#aba7a6] text-center text-lg md:text-xl font-semibold flex-col items-center">
         <p>
           Don't settle for mediocrity embrace the future of management{" "}
           <span className="inline md:hidden"> with Manage Wise.</span>
@@ -56,7 +71,13 @@ const Features = () => {
         <p className="md:block hidden ">with Manage Wise.</p>
       </div>
 
-      <div className="bg-[#ededfa] rounded-3xl h-1/2 w-[90%] md:w-2/5 p-8 pt-16 mt-16">
+      <motion.div
+        ref={ref1}
+        initial={{ y: 25, opacity: 0 }}
+        animate={inView1 ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="bg-[#ededfa] rounded-3xl h-1/2 w-[90%] md:w-2/5 p-8 pt-16 mt-16"
+      >
         <span className=" rounded-2xl text-2xl md:text-3xl p-1 bg-white">
           ⭐️
         </span>
@@ -67,7 +88,7 @@ const Features = () => {
             intuitive interface and robust features.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {data.map((item) => (
         <FeatureCard

@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import AddMoreCard from "../../common/addMoreCard";
 
 import Image6 from "../../assets/images/img6.png";
@@ -25,19 +27,36 @@ const AddMore = () => {
     },
   ];
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <div className="bg-[#1c1c1c] px-8 md:px-16 pt-16 md:pt-24 overflow-hidden">
+    <motion.div
+      initial={{ transform: "scale(0.3" }}
+      animate={{ transform: "scale(1)" }}
+      className="bg-[#1c1c1c] px-8 md:px-16 pt-16 md:pt-24 overflow-hidden"
+    >
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  flex justify-center items-center font-bold bg-white w-[140px]">
         <span className="mr-2 text-lg">🤩</span> AND MORE...
       </p>
 
-      <div className="text-white text-4xl md:text-[40px] mt-4 font-semibold">
+      <motion.div
+        ref={ref}
+        initial={{ y: 15, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="text-white text-4xl md:text-[40px] mt-4 font-semibold"
+      >
         <p>
           Explore an array of features that elevate your{" "}
           <span className="text-[#fe8162]">Productivity</span> to
         </p>
         <p>new heights</p>
-      </div>
+      </motion.div>
 
       <div className="text-[#aba7a6] text-lg md:text-xl mt-4 mb-8 md:font-semibold">
         <p className="">
@@ -47,13 +66,15 @@ const AddMore = () => {
         <p className="hidden md:block">manage and optimize your operations</p>
       </div>
 
-      {data.map((item) => (
-        <AddMoreCard
-          keys={item.key}
-          heading={item.heading}
-          title={item.title}
-        />
-      ))}
+      <div className="mt-8">
+        {data.map((item) => (
+          <AddMoreCard
+            keys={item.key}
+            heading={item.heading}
+            title={item.title}
+          />
+        ))}
+      </div>
 
       <div className="flex justify-center items-center mt-16 ">
         <p className="text-[#8247ff] text-[12px] border font-bold rounded-lg px-2 flex justify-center items-center  bg-white w-[140px]">
@@ -82,10 +103,16 @@ const AddMore = () => {
         <p className="hidden md:block">widely-used tools and platforms.</p>
       </div>
 
-      <div className="w-full mt-8 mb-[-5px] flex justify-center items-center ">
+      <motion.div
+        ref={ref1}
+        initial={{ y: 25, opacity: 0 }}
+        animate={inView1 ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="w-full mt-12 mb-[-5px] flex justify-center items-center "
+      >
         <img src={Image6} alt="img" className="h-1/2 w-[95%] md:w-1/2 " />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

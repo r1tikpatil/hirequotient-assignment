@@ -1,10 +1,23 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Image7 from "../../assets/images/img7.png";
 
 const MissOut = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div className="bg-gradient-to-b pt-24 pb-4 flex flex-col justify-center items-center via-[#fdf2ec] bg-[#fdf2ec] from-white ">
+    <motion.div
+      ref={ref1}
+      initial={{ transform: "rotateX(50deg)" }}
+      animate={inView1 ? { transform: "rotateX(0deg)" } : {}}
+      transition={{ duration: 0.4, ease: "easeInOut", delay: 1 }}
+      className="bg-gradient-to-b pt-24 pb-4 flex flex-col justify-center items-center via-[#fdf2ec] bg-[#fdf2ec] from-white "
+    >
       <div className="border rounded-3xl w-[90%] bg-white px-8 py-16">
         <div className="flex justify-center items-center ">
           <p className="text-[#8247ff] text-[12px] border rounded-lg align-center px-4 font-bold  align-center bg-white inline-block">
@@ -12,14 +25,20 @@ const MissOut = () => {
           </p>
         </div>
 
-        <div className="text-center flex mt-2 flex-col items-center justify-center">
+        <motion.div
+          ref={ref}
+          initial={{ y: 25, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="text-center flex mt-2 md:mt-6 flex-col items-center justify-center"
+        >
           <p className="text-center text-4xl md:text-[45px] font-semibold">
             Unleash your <span className="text-[#fe8162]">Potential </span> with
             us
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex text-center text-[#aba7a6] text-lg md:text-xl mt-4 md:mt-2 font-semibold flex-col items-center">
+        <div className="flex text-center text-[#aba7a6] text-lg md:text-xl mt-4 md:mt-8 font-semibold flex-col items-center">
           <p>
             Join our community of ambitious individuals and organizations{" "}
             <span className="inline md:hidden">
@@ -49,7 +68,7 @@ const MissOut = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
