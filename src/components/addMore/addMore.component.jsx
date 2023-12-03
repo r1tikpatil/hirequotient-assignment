@@ -26,7 +26,7 @@ const AddMore = () => {
   ];
 
   return (
-    <div className="bg-[#1c1c1c] w-screen px-16 pt-24">
+    <div className="bg-[#1c1c1c] w-screen px-16 pt-24 overflow-hidden">
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  flex justify-center items-center font-bold bg-white w-[140px]">
         <span className="mr-2 text-lg">🤩</span> AND MORE...
       </p>
@@ -71,8 +71,8 @@ const AddMore = () => {
         <p>widely-used tools and platforms.</p>
       </div>
 
-      <div className="w-full mt-8 flex justify-center items-center">
-        <img src={Image6} alt="img" className="h-1/2 w-1/2" />
+      <div className="w-full mt-8 mb-[-5px] flex justify-center items-center ">
+        <img src={Image6} alt="img" className="h-1/2 w-1/2 " />
       </div>
     </div>
   );
