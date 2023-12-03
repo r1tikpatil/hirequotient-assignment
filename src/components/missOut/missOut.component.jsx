@@ -1,11 +1,11 @@
 import React from "react";
 
-import Image7 from "../../assets/images/img7.jpeg";
+import Image7 from "../../assets/images/img7.png";
 
 const MissOut = () => {
   return (
-    <div className="bg-gradient-to-b pt-24 pb-4 flex flex-col items-center via-[#fdf2ec] from-white w-screen">
-      <div className="border rounded-3xl w-[85%] bg-white py-16">
+    <div className="bg-gradient-to-b pt-24 pb-4 flex flex-col items-center via-[#fdf2ec] bg-[#fdf2ec] from-white w-screen">
+      <div className="border rounded-3xl w-[90%] bg-white py-16">
         <div className="flex justify-center items-center ">
           <p className="text-[#8247ff] text-[12px] border rounded-lg align-center px-4 font-bold  align-center bg-white inline-block">
             <span className="mr-2 text-lg">👋</span> DON'T MISS OUT
@@ -40,7 +40,7 @@ const MissOut = () => {
 
         <div className="flex w-full justify-center items-center mt-16 ">
           <div className="">
-            <img src={Image7} alt="" className="scale-150" />
+            <img src={Image7} alt="" className="" />
           </div>
         </div>
       </div>

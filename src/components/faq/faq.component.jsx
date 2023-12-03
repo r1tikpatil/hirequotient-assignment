@@ -32,6 +32,7 @@ const FAQ = () => {
       ans: "Your data's security is a top priority. Manage Wise employs robust data encryption and follows industry best practices to ensure your sensitive information is safe and protected.",
     },
   ];
+
   return (
     <div className="w-screen px-16 pt-24 bg-white">
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  flex justify-center items-center font-bold bg-white w-[80px]">

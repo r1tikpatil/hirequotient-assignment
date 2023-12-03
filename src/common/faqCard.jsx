@@ -31,7 +31,7 @@ const FAQCard = ({ question, answer }) => {
 
       <div
         className={`cursor-default mt-4 ${
-          isOpen ? "opacity-100" : "opacity-0"
+          isOpen ? "block	" : "hidden"
         } transition-all duration-600 ease-in-out `}
       >
         <p className="text-[#aba7a6] text-lg font-semibold">{answer}</p>

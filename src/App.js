@@ -8,6 +8,7 @@ import FAQ from "./components/faq/faq.component";
 import Pricing from "./components/pricing/pricing.component";
 import Testimonial from "./components/testimonial/testimonial.component";
 import MissOut from "./components/missOut/missOut.component";
+import Footer from "./components/footer/footer.component";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Pricing />
       <Testimonial />
       <MissOut />
+      <Footer />
     </div>
   );
 };
