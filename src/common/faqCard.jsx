@@ -11,7 +11,7 @@ const FAQCard = ({ question, answer }) => {
     <div
       onClick={handleClick}
       className={`my-4 py-4 px-8 rounded-3xl bg-[#f7f8fd] box-border transition-all duration-300 ease-in-out ${
-        isOpen ? "h-[300px] md:h-[150px] " : "h-[100px] md:h-[70px] "
+        isOpen ? "h-[320px] md:h-[150px] " : "h-[100px] md:h-[70px] "
       }`}
     >
       <div
@@ -34,7 +34,7 @@ const FAQCard = ({ question, answer }) => {
           isOpen ? "block	" : "hidden"
         } transition-all duration-600 ease-in-out `}
       >
-        <p className="text-[#aba7a6] text-md md:text-lg font-semibold">
+        <p className="text-[#aba7a6] text-[15px] md:text-lg font-semibold">
           {answer}
         </p>
       </div>
