@@ -9,7 +9,7 @@ const DashBoard = () => {
         <span className="mr-2 text-lg">👋</span> WELCOME TO MANAGE WISE!
       </p>
 
-      <div className="w-[80%] text-center flex md:mt-[-5px] flex-col items-center">
+      <div className="w-[80%] text-center flex mt-[5px] flex-col items-center">
         <p className="text-5xl md:text-[78px] font-semibold">
           Empower your business with
         </p>
