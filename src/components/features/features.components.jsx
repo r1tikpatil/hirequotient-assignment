@@ -41,7 +41,7 @@ const Features = () => {
         <span className="mr-2 text-lg">🔥</span> PREMIER FEATURES
       </p>
 
-      <div className="flex mt-2 flex-col items-center">
+      <div className="flex w-[90%] md:w-[100%] mt-2 flex-col items-center">
         <p className="text-4xl md:text-[45px] text-center font-semibold">
           Discover our product's{" "}
           <span className="text-[#fe8162]">Capabilities</span>
