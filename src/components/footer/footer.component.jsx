@@ -16,10 +16,18 @@ const Footer = () => {
 
         <div className="mt-8 md:mt-0">
           <ul className="text-md text-center font-semibold cursor-pointer">
-            <li className="my-2 hover:text-[#aba7a6]">Features</li>
-            <li className="my-2 hover:text-[#aba7a6]">FAQ</li>
-            <li className="my-2 hover:text-[#aba7a6]">Pricing</li>
-            <li className="my-2 hover:text-[#aba7a6]">Testimonials</li>
+            <li className="my-2 hover:text-[#aba7a6]">
+              <a href="#features">Features</a>
+            </li>
+            <li className="my-2 hover:text-[#aba7a6]">
+              <a href="#faq">FAQ</a>
+            </li>
+            <li className="my-2 hover:text-[#aba7a6]">
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li className="my-2 hover:text-[#aba7a6]">
+              <a href="#testimonials">Testimonials</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -31,9 +39,15 @@ const Footer = () => {
 
         <div className="mt-8 md:mt-0">
           <div className="text-md font-semibold flex space-x-4 cursor-pointer">
-            <RiInstagramFill size={25} />
-            <FaSquareXTwitter size={25} />
-            <FaLinkedinIn size={25} />
+            <a href="https://www.instagram.com/" target="_blank">
+              <RiInstagramFill size={25} />
+            </a>
+            <a href="https://twitter.com/home" target="_blank">
+              <FaSquareXTwitter size={25} />
+            </a>
+            <a href="https://www.linkedin.com/feed/" target="_blank">
+              <FaLinkedinIn size={25} />
+            </a>
           </div>
         </div>
       </div>

@@ -43,7 +43,10 @@ const FAQ = () => {
   });
 
   return (
-    <div className="px-8 md:px-16 pt-24 bg-white flex flex-col items-center md:items-start">
+    <div
+      id="faq"
+      className="px-8 md:px-16 pt-24 bg-white flex flex-col items-center md:items-start"
+    >
       <p className="text-[#8247ff] text-[12px] border rounded-lg px-2 flex justify-center items-center font-bold bg-white w-[80px]">
         <span className="mr-2 text-lg">🙋‍♀️</span> FAQ
       </p>

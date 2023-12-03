@@ -24,33 +24,45 @@ const Navbar = () => {
         <div className="md:flex hidden w-1/2 h-full mr-8">
           <ul className="flex  justify-center space-x-8  w-full h-full">
             <div className=" flex justify-center items-center">
-              <li className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer">
+              <a
+                href="#features"
+                className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer"
+              >
                 Features
-              </li>
+              </a>
             </div>
             <div className="mt-4">
               <li className="text-gray-400 text-2xl font-bold">.</li>
             </div>
             <div className="flex justify-center items-center">
-              <li className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer">
+              <a
+                href="#faq"
+                className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer"
+              >
                 FAQ
-              </li>
+              </a>
             </div>
             <div className="mt-4">
               <li className="text-gray-400 text-2xl font-bold">.</li>
             </div>
             <div className=" flex justify-center items-center">
-              <li className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer">
+              <a
+                href="#pricing"
+                className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer"
+              >
                 Pricing
-              </li>
+              </a>
             </div>
             <div className="mt-4">
               <li className="text-gray-400 text-2xl font-bold">.</li>
             </div>
             <div className="flex justify-center items-center">
-              <li className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer">
+              <a
+                href="#testimonials"
+                className="text-gray-700 font-semibold hover:text-blue-700 hover:cursor-pointer"
+              >
                 Testimonials
-              </li>
+              </a>
             </div>
             <div className="flex justify-center items-center hover:cursor-pointer box-content">
               <li className="bg-white box-content border border-gray-300 transition-all duration-300 ease-in-out text-black font-bold text-lg hover:border-black px-4 py-2 rounded-xl">
@@ -73,11 +85,22 @@ const Navbar = () => {
               open ? "flex" : "hidden"
             } flex-col justify-center items-center transition-all  duration-500 ease-in-out`}
           >
-            <p className="my-6 text-sm">Features</p>
-            <p className="my-6 text-sm">FAQ</p>
-            <p className="my-6 text-sm">Pricing</p>
-            <p className="my-6 text-sm">Testimonials</p>
-            <div className="flex mt-6 w-[90vw] justify-center items-center hover:cursor-pointer box-content">
+            <p onClick={handleCLick} className="my-6 text-sm">
+              <a href="#features">Features</a>
+            </p>
+            <p onClick={handleCLick} className="my-6 text-sm">
+              <a href="#faq">FAQ</a>
+            </p>
+            <p onClick={handleCLick} className="my-6 text-sm">
+              <a href="#pricing">Pricing</a>
+            </p>
+            <p onClick={handleCLick} className="my-6 text-sm">
+              <a href="#testimonials">Testimonials</a>
+            </p>
+            <div
+              onClick={handleCLick}
+              className="flex mt-6 w-[90vw] justify-center items-center hover:cursor-pointer box-content"
+            >
               <p className="bg-[#8247ff] box-content border border-gray-300 text-white font-bold flex justify-center items-center  w-[90vw] text-md  px-4 py-2 rounded-xl">
                 Buy Template
               </p>

@@ -45,7 +45,10 @@ const Features = () => {
   });
 
   return (
-    <div className="pt-24 flex flex-col items-center bg-white pb-16">
+    <div
+      id="features"
+      className="pt-24 flex flex-col items-center bg-white pb-16"
+    >
       <p className="text-[#8247ff] text-[12px] border rounded-lg flex justify-center items-center align-center px-4 font-bold  align-center bg-white">
         <span className="mr-2 text-lg">🔥</span> PREMIER FEATURES
       </p>

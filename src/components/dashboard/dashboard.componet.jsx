@@ -22,7 +22,10 @@ const DashBoard = () => {
     triggerOnce: true,
   });
   return (
-    <div className="bg-gradient-to-b pt-16 md:pt-24 pb-4 flex flex-col items-center from-[#fdf2ec] via-white">
+    <div
+      id="dashboard"
+      className="bg-gradient-to-b pt-16 md:pt-24 pb-4 flex flex-col items-center from-[#fdf2ec] via-white"
+    >
       <motion.p
         ref={ref1}
         initial={{ y: 35, opacity: 0 }}
@@ -38,7 +41,7 @@ const DashBoard = () => {
         initial={{ y: 35, opacity: 0 }}
         animate={inView2 ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.3 }}
-        className="w-[80%] text-center flex mt-[5px] md:mt-[10px] flex-col items-center"
+        className="w-[80%] text-center mt-[10px] flex-col items-center"
       >
         <p className="text-5xl md:text-[78px] font-semibold">
           Empower your business with

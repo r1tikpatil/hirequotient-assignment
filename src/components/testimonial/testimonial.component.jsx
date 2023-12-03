@@ -8,7 +8,7 @@ const Testimonial = () => {
   });
 
   return (
-    <div className="px-8 md:px-16 pt-8 bg-white">
+    <div id="testimonials" className="px-8 md:px-16 pt-8 bg-white">
       <div className="w-full flex justify-start items-center">
         <p className="text-[#8247ff] text-[12px] border rounded-lg px-2  font-bold bg-white inline-block">
           <span className="mr-1 text-lg">🧡</span> TESTIMONIALS
