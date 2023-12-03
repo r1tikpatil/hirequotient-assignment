@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import CarouselComponent from "../../common/carousel/carousel";
+
 const Testimonial = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -39,6 +41,8 @@ const Testimonial = () => {
           testimonials and learn how we has helped businesses.
         </p>
       </div>
+
+      <CarouselComponent />
     </div>
   );
 };
