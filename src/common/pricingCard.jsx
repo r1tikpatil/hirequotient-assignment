@@ -23,16 +23,18 @@ const PricingCard = ({ keys, plan, rupees, points }) => {
         <p className="text-lg ml-1">/month</p>
       </div>
 
-      <div className="w-full flex flex-col items-start mt-6">
+      <div className="w-full flex flex-col items-start mt-2 md:mt-6">
         {points.map((item) => (
           <div className="flex flex-row justify-center items-center mt-2">
             <FaCheck color="lightgreen" />
-            <p className="ml-4 text-[#aba7a6] text-md font-semibold">{item}</p>
+            <p className="ml-4 text-[#aba7a6] text-sm md:text-md font-semibold">
+              {item}
+            </p>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center items-center box-content cursor-pointer absolute bottom-8 left-12">
+      <div className="flex justify-center items-center box-content cursor-pointer absolute bottom-4 md:bottom-8 left-12">
         <div
           className={`${
             keys % 2 !== 0 ? "bg-white" : "bg-[#8247ff]"
