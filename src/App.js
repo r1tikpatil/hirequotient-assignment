@@ -6,6 +6,8 @@ import Features from "./components/features/features.components";
 import AddMore from "./components/addMore/addMore.component";
 import FAQ from "./components/faq/faq.component";
 import Pricing from "./components/pricing/pricing.component";
+import Testimonial from "./components/testimonial/testimonial.component";
+import MissOut from "./components/missOut/missOut.component";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
       <AddMore />
       <FAQ />
       <Pricing />
+      <Testimonial />
+      <MissOut />
     </div>
   );
 };
